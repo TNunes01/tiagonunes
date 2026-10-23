@@ -1,499 +1,304 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiago Nunes dos Santos - Currículo Profissional</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- segurança: só carrega código e estilos do próprio site e do Google Fonts -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Tiago Nunes dos Santos</title>
+  <meta name="description" content="Tiago Nunes dos Santos. Cada etapa me trouxe até aqui, e o próximo passo é a tecnologia. Explorando Inteligência Artificial e estudando Cibersegurança. Brasília, DF.">
+  <meta name="theme-color" content="#0a0f1c">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background-color: #f4f6f8;
-        }
+  <!-- Open Graph (prévia ao compartilhar o link) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tiago Nunes dos Santos">
+  <meta property="og:description" content="Cada etapa me trouxe até aqui, e o próximo passo é a tecnologia.">
+  <meta property="og:url" content="https://tnunes01.github.io/tiagonunes/">
+  <meta property="og:image" content="https://tnunes01.github.io/tiagonunes/foto.jpg">
+  <meta property="og:locale" content="pt_BR">
 
-        /* Header Hero */
-        .hero {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-            padding: 90px 20px;
-            text-align: center;
-        }
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a0f1c'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='%233ba4ff'>TN</text></svg>">
 
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .hero .subtitle {
-            font-size: 1.15rem;
-            margin-bottom: 35px;
-            opacity: 0.95;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 13px 32px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background-color: white;
-            color: #2c3e50;
-        }
-
-        .btn-primary:hover {
-            background-color: #ecf0f1;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background-color: white;
-            color: #2c3e50;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Sections */
-        section {
-            padding: 70px 20px;
-        }
-
-        .section-white {
-            background-color: white;
-        }
-
-        .section-gray {
-            background-color: #f4f6f8;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 40px;
-            text-align: center;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70px;
-            height: 3px;
-            background-color: #3498db;
-        }
-
-        /* Perfil Profissional */
-        .perfil-text {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: #4a5568;
-            text-align: center;
-        }
-
-        /* Formação Acadêmica */
-        .formacao-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .formacao-card {
-            background: white;
-            padding: 35px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 4px solid #3498db;
-        }
-
-        .section-white .formacao-card {
-            background: #f9fafb;
-        }
-
-        .formacao-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-        }
-
-        .formacao-card h3 {
-            color: #2c3e50;
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .formacao-card .instituicao {
-            color: #3498db;
-            font-size: 1rem;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .formacao-card p {
-            color: #5a6c7d;
-            line-height: 1.8;
-            font-size: 0.98rem;
-        }
-
-        /* Competências */
-        .competencias-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .competencia-item {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            transition: all 0.3s ease;
-        }
-
-        .competencia-item:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transform: translateX(5px);
-        }
-
-        .competencia-item h4 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-
-        .competencia-item p {
-            color: #5a6c7d;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Cursos */
-        .cursos-container {
-            max-width: 750px;
-            margin: 40px auto 0;
-        }
-
-        .curso-item {
-            background: white;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            border-left: 4px solid #3498db;
-            transition: all 0.3s ease;
-        }
-
-        .curso-item:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
-        }
-
-        .curso-item h4 {
-            color: #2c3e50;
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .curso-item .detalhes {
-            color: #5a6c7d;
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-        }
-
-        .curso-item .status {
-            color: #27ae60;
-            font-size: 0.92rem;
-            font-weight: 500;
-        }
-
-        /* Contato */
-        .contato-grid {
-            max-width: 650px;
-            margin: 40px auto 0;
-            display: grid;
-            gap: 18px;
-        }
-
-        .contato-item {
-            background: white;
-            padding: 22px 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-        }
-
-        .contato-item:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .contato-item .label {
-            color: #2c3e50;
-            font-weight: 600;
-            min-width: 120px;
-            font-size: 0.95rem;
-        }
-
-        .contato-item .valor {
-            color: #5a6c7d;
-            flex: 1;
-            text-align: right;
-        }
-
-        .contato-item a {
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contato-item a:hover {
-            color: #2c3e50;
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 70px;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 1.7rem;
-            }
-
-            .formacao-grid,
-            .competencias-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contato-item {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-
-            .contato-item .label {
-                min-width: auto;
-            }
-
-            .contato-item .valor {
-                text-align: center;
-            }
-
-            section {
-                padding: 50px 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 60px 20px;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 280px;
-            }
-        }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="init.js"></script>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="container">
-            <h1>Tiago Nunes dos Santos</h1>
-            <p class="subtitle">Formação em Gestão de Recursos Humanos e Secretariado, com foco em rotinas administrativas e organização institucional</p>
-            <div class="hero-buttons">
-                <a href="mailto:Tiagonunes01ti@gmail.com" class="btn btn-primary">Entrar em Contato</a>
-                <a href="https://wa.me/5561998420469" class="btn btn-secondary" target="_blank">WhatsApp</a>
-            </div>
-        </div>
+  <!-- ===================== ABERTURA ===================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">TN</div>
+      <p class="loader__line"><span class="loader__prompt">&gt;</span> <span data-loader-text></span><span class="loader__caret"></span></p>
+      <div class="loader__bar"><span></span></div>
+      <p class="loader__pct" data-loader-pct>0%</p>
     </div>
+    <button class="loader__skip" type="button">Pular →</button>
+  </div>
 
-    <!-- Perfil Profissional -->
-    <section class="section-white">
-        <div class="container">
-            <h2 class="section-title">Perfil Profissional</h2>
-            <p class="perfil-text">
-                Profissional com formação acadêmica em Gestão de Recursos Humanos e formação técnica em Secretariado. Perfil organizado, responsável e comprometido com o desenvolvimento contínuo de competências voltadas ao ambiente administrativo. Preparação teórica aplicada a rotinas de escritório, organização de documentos, atendimento institucional e apoio a processos organizacionais.
-            </p>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <!-- ===================== MENU ===================== -->
+  <header class="nav">
+    <div class="nav__pill">
+      <a href="#inicio" class="nav__logo" aria-label="Tiago Nunes — voltar ao início">TN</a>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+      <nav id="menu" class="nav__menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#atualmente">Atualmente</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container">
+
+    <!-- ===================== INÍCIO ===================== -->
+    <section class="bento" id="inicio" aria-labelledby="hero-nome">
+
+      <article class="tile tile--intro span-3 row-2 reveal">
+        <!-- Linhas de circuito decorativas -->
+        <svg class="circuit" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g class="circuit__base">
+            <path d="M900 60 H700 L660 100 H520 L490 70 H420"/>
+            <path d="M900 180 H760 L720 220 H600"/>
+            <path d="M900 330 H780 L740 290 H640 L610 320 H540"/>
+            <path d="M660 100 V20 H580"/>
+            <path d="M720 220 V300"/>
+          </g>
+          <g class="circuit__nodes">
+            <circle cx="420" cy="70" r="3"/><circle cx="600" cy="220" r="3"/>
+            <circle cx="540" cy="320" r="3"/><circle cx="580" cy="20" r="3"/>
+            <circle cx="720" cy="300" r="3"/>
+          </g>
+          <g class="circuit__pulse">
+            <path d="M900 60 H700 L660 100 H520 L490 70 H420"/>
+            <path d="M900 330 H780 L740 290 H640 L610 320 H540"/>
+          </g>
+        </svg>
+
+        <div class="intro">
+          <p class="tile__label">// olá, eu sou</p>
+          <h1 id="hero-nome" class="intro__name">Tiago Nunes<br><span class="gradient-text">dos Santos</span></h1>
+          <p class="intro__lead">Cada etapa me trouxe até aqui, e o próximo passo é a <span class="gradient-text">tecnologia</span>.</p>
+          <p class="intro__sub">Explorando Inteligência Artificial e estudando Cibersegurança.</p>
+          <div class="intro__actions">
+            <a href="#contato" class="btn btn--primary">Fale comigo</a>
+            <a href="#experiencia" class="btn btn--ghost">Ver experiência</a>
+          </div>
         </div>
+      </article>
+
+      <figure class="tile tile--photo row-2 reveal">
+        <img src="foto.jpg" alt="Foto de Tiago Nunes dos Santos" width="600" height="600">
+        <span class="photo-tint" aria-hidden="true"></span>
+        <span class="photo-fallback" aria-hidden="true">TN</span>
+      </figure>
+
+      <article class="tile tile--ai reveal">
+        <span class="tile__icon tile__icon--glow" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z" fill="currentColor" stroke="none"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <h2 class="tile__title">Inteligência Artificial</h2>
+        <p class="tile__text">Uso no dia a dia para trabalhar de forma mais inteligente.</p>
+      </article>
+
+      <article class="tile tile--cyber reveal">
+        <span class="tile__icon tile__icon--scan" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8.5 8 9 4.6-.5 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <h2 class="tile__title">Cibersegurança</h2>
+        <p class="tile__text">Em estudo, rumo à próxima etapa.</p>
+      </article>
+
+      <article class="tile tile--clock reveal">
+        <p class="tile__label">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Brasília, DF
+        </p>
+        <p class="clock" aria-label="Horário local em Brasília"><span data-clock>--:--</span></p>
+        <p class="tile__text">Horário local · UTC−3</p>
+      </article>
+
+      <article class="tile tile--social reveal">
+        <p class="tile__label">Conecte-se</p>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/tiago-nunes-dos-santos-8795041b5" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>
+          </a>
+          <a href="https://wa.me/5561998420469" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+          <a href="mailto:tiagonunes01ti@gmail.com" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="stroke"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </div>
+      </article>
     </section>
 
-    <!-- Formação Acadêmica -->
-    <section class="section-gray">
-        <div class="container">
-            <h2 class="section-title">Formação Acadêmica</h2>
-            <div class="formacao-grid">
-                <div class="formacao-card">
-                    <h3>Gestão de Recursos Humanos</h3>
-                    <p class="instituicao">Universidade do Distrito Federal (UDF)</p>
-                    <p>Formação acadêmica voltada aos fundamentos de Recursos Humanos, abrangendo organização de processos administrativos, rotinas de departamento pessoal, noções de legislação trabalhista, atendimento interno e procedimentos organizacionais aplicados ao contexto administrativo.</p>
-                </div>
-                <div class="formacao-card">
-                    <h3>Técnico em Secretariado</h3>
-                    <p class="instituicao">Colégio Virtus - 800 horas</p>
-                    <p>Formação técnica focada em apoio administrativo, rotinas de escritório, controle e organização de documentos, atendimento profissional, redação administrativa, cerimonial, apoio à gestão e planejamento de eventos corporativos, com aplicação prática de ferramentas de informática.</p>
-                </div>
-            </div>
-        </div>
+    <!-- ===================== ATUALMENTE ===================== -->
+    <section class="block" id="atualmente" aria-labelledby="now-titulo">
+      <p class="block__label reveal"><span>01</span> Atualmente</p>
+      <div class="bento">
+        <article class="tile tile--now span-2 row-2 reveal">
+          <span class="pill pill--live">FNAS · desde fev/2026</span>
+          <h2 id="now-titulo" class="now__title">
+            Trabalho com <span class="gradient-text">gestão pública</span> no Fundo Nacional de Assistência Social.
+          </h2>
+          <p class="tile__text">Acompanho projetos, apoio processos de contratação e participo da construção de um sistema para a área.</p>
+        </article>
+
+        <article class="tile reveal">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg>
+          </span>
+          <h3 class="tile__title">Sistema nacional</h3>
+          <p class="tile__text">Idealizei o sistema e sou a área de negócio: protótipos, regras e validação das histórias de usuário.</p>
+        </article>
+        <article class="tile reveal">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+          </span>
+          <h3 class="tile__title">Projeto Yanomami</h3>
+          <p class="tile__text">Acompanho a execução financeira e dou apoio aos entes federados.</p>
+        </article>
+        <article class="tile reveal">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 12h6M9 16h6M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/></svg>
+          </span>
+          <h3 class="tile__title">Contratações públicas</h3>
+          <p class="tile__text">Elaboro ETP, Termos de Referência e minutas de contrato.</p>
+        </article>
+        <article class="tile reveal">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m8 9-4 3 4 3m8-6 4 3-4 3M14 5l-4 14"/></svg>
+          </span>
+          <h3 class="tile__title">Automação</h3>
+          <p class="tile__text">Uso Python para automatizar análises que antes eram manuais.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Formação e Conteúdos Estudados -->
-    <section class="section-white">
-        <div class="container">
-            <h2 class="section-title">Formação e Conteúdos Estudados</h2>
-            <div class="competencias-grid">
-                <div class="competencia-item">
-                    <h4>Organização e Controle de Documentos</h4>
-                    <p>Conhecimentos teóricos em organização, arquivamento e controle de documentos administrativos e institucionais.</p>
-                </div>
-                <div class="competencia-item">
-                    <h4>Apoio a Rotinas Administrativas</h4>
-                    <p>Base teórica para suporte em processos administrativos, rotinas de escritório e organização de demandas internas.</p>
-                </div>
-                <div class="competencia-item">
-                    <h4>Atendimento e Comunicação Institucional</h4>
-                    <p>Estudos sobre comunicação formal aplicada ao atendimento interno e externo em ambientes organizacionais.</p>
-                </div>
-                <div class="competencia-item">
-                    <h4>Apoio à Organização de Eventos</h4>
-                    <p>Conhecimentos em planejamento, logística e organização de eventos corporativos e institucionais.</p>
-                </div>
-                <div class="competencia-item">
-                    <h4>Informática Aplicada ao Escritório</h4>
-                    <p>Conhecimentos em Word, Excel e PowerPoint aplicados ao contexto administrativo.</p>
-                </div>
-                <div class="competencia-item">
-                    <h4>Análise e Organização de Demandas</h4>
-                    <p>Base teórica para análise de situações administrativas e organização de processos institucionais.</p>
-                </div>
-            </div>
-        </div>
+    <!-- ===================== FORMAÇÃO ===================== -->
+    <section class="block" id="formacao" aria-labelledby="form-titulo">
+      <p class="block__label reveal"><span>02</span> <span id="form-titulo">Formação</span></p>
+      <div class="bento">
+        <article class="tile tile--edu reveal">
+          <span class="pill pill--ok">Concluído</span>
+          <h3 class="tile__title">Tecnólogo em Gestão de Recursos Humanos</h3>
+          <p class="tile__org">UDF Centro Universitário · 2019 – 2021</p>
+          <p class="tile__text">Processos administrativos, departamento pessoal, legislação trabalhista e gestão de pessoas.</p>
+        </article>
+        <article class="tile tile--edu reveal">
+          <span class="pill">3 semestres</span>
+          <h3 class="tile__title">Análise e Desenvolvimento de Sistemas</h3>
+          <p class="tile__org">UDF Centro Universitário · 2024 – 2025</p>
+          <p class="tile__text">Base em lógica de programação, desenvolvimento e engenharia de software.</p>
+        </article>
+        <article class="tile tile--edu reveal">
+          <span class="pill pill--ok">Concluído</span>
+          <h3 class="tile__title">Técnico em Secretariado · 600h</h3>
+          <p class="tile__org">Colégio Virtus · 2025</p>
+          <p class="tile__text">Apoio à gestão, redação administrativa, controle de documentos, cerimonial e eventos corporativos.</p>
+        </article>
+        <article class="tile tile--edu tile--accent reveal">
+          <span class="pill pill--live">Em andamento</span>
+          <h3 class="tile__title">Bootcamp Santander · Cibersegurança</h3>
+          <p class="tile__org"><a href="https://web.dio.me/track/bootcamp-santander-ciberseguranca-do-zero-a-pratica" target="_blank" rel="noopener">DIO <span aria-hidden="true">↗</span></a></p>
+          <p class="tile__text">Fundamentos de segurança da informação, redes e proteção de sistemas, com prática.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Cursos Complementares -->
-    <section class="section-gray">
-        <div class="container">
-            <h2 class="section-title">Cursos Complementares</h2>
-            <div class="cursos-container">
-                <div class="curso-item">
-                    <h4>Técnico em Secretariado</h4>
-                    <p class="detalhes">Carga horária: 800 horas | Instituição: Colégio Virtus</p>
-                    <p class="status">✓ Concluído em Dezembro de 2025 - Aprovado em todos os módulos</p>
-                </div>
-                <div class="curso-item">
-                    <h4>Informática Completa</h4>
-                    <p class="detalhes">Windows, Word, Excel, PowerPoint, Digitação e Internet | Carga horária: 80 horas</p>
-                    <p class="status">✓ Concluído em Julho de 2018</p>
-                </div>
-            </div>
-        </div>
+    <!-- ===================== EXPERIÊNCIA ===================== -->
+    <section class="block" id="experiencia" aria-labelledby="exp-titulo">
+      <p class="block__label reveal"><span>03</span> <span id="exp-titulo">Experiência</span></p>
+      <div class="bento">
+        <article class="tile tile--job tile--accent span-2 reveal">
+          <div class="job__meta">
+            <time>fev/2026 – atual</time>
+            <span class="pill pill--live">Atual</span>
+          </div>
+          <h3 class="tile__title tile__title--lg">Analista Administrativo</h3>
+          <p class="tile__org">Fundo Nacional de Assistência Social (FNAS) · Terceirizado</p>
+          <ul class="job__list">
+            <li>Acompanhamento do projeto Yanomami e da execução financeira.</li>
+            <li>Elaboração de relatórios, portarias e planos de providências.</li>
+            <li>Elaboração de ETP, Termos de Referência e minutas de contrato.</li>
+            <li>Apoio à área de negócio de um sistema nacional: regras, telas e histórias de usuário.</li>
+          </ul>
+          <ul class="chips" aria-label="Temas">
+            <li>Gestão Pública</li><li>Contratações</li><li>Regras de Negócio</li><li>Prototipação</li>
+          </ul>
+        </article>
+
+        <article class="tile tile--job span-2 reveal">
+          <div class="job__meta">
+            <time>set/2022 – fev/2025</time>
+          </div>
+          <h3 class="tile__title tile__title--lg">Suporte Administrativo</h3>
+          <p class="tile__org">Casa e Terra Imobiliária e Engenharia · Tempo integral</p>
+          <ul class="job__list">
+            <li>Rotinas externas em cartórios e bancos.</li>
+            <li>Apoio à diretoria e à organização de eventos.</li>
+            <li>Suporte de TI: manutenção, formatação e instalação de sistemas.</li>
+          </ul>
+          <ul class="chips" aria-label="Temas">
+            <li>Suporte Técnico</li><li>Rotinas Administrativas</li><li>Eventos</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <!-- Contato -->
-    <section class="section-white">
-        <div class="container">
-            <h2 class="section-title">Contato</h2>
-            <div class="contato-grid">
-                <div class="contato-item">
-                    <span class="label">E-mail</span>
-                    <span class="valor">
-                        <a href="mailto:Tiagonunes01ti@gmail.com">Tiagonunes01ti@gmail.com</a>
-                    </span>
-                </div>
-                <div class="contato-item">
-                    <span class="label">WhatsApp</span>
-                    <span class="valor">
-                        <a href="https://wa.me/5561998420469" target="_blank">(61) 9 9842-0469</a>
-                    </span>
-                </div>
-                <div class="contato-item">
-                    <span class="label">Localização</span>
-                    <span class="valor">Paranoá - Distrito Federal</span>
-                </div>
-                <div class="contato-item">
-                    <span class="label">CNH</span>
-                    <span class="valor">Categorias A e B</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ===================== CONTATO ===================== -->
+    <section class="block" id="contato" aria-labelledby="contato-titulo">
+      <p class="block__label reveal"><span>04</span> Contato</p>
+      <div class="bento">
+        <article class="tile tile--cta span-2 row-2 reveal">
+          <h2 id="contato-titulo" class="cta__title">Vamos <span class="gradient-text">conversar?</span></h2>
+          <p class="tile__text">Estou aberto a oportunidades e trocas sobre gestão pública, tecnologia e cibersegurança.</p>
+          <a href="mailto:tiagonunes01ti@gmail.com" class="btn btn--primary">Enviar e-mail</a>
+        </article>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Tiago Nunes dos Santos. Todos os direitos reservados.</p>
-    </footer>
+        <a href="https://www.linkedin.com/in/tiago-nunes-dos-santos-8795041b5" target="_blank" rel="noopener" class="tile tile--link reveal">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="fill"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>
+          </span>
+          <span class="link__text"><strong>LinkedIn</strong><small>tiago-nunes-dos-santos</small></span>
+          <span class="link__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a href="https://wa.me/5561998420469" target="_blank" rel="noopener" class="tile tile--link reveal">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="fill"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </span>
+          <span class="link__text"><strong>WhatsApp</strong><small>(61) 99842-0469</small></span>
+          <span class="link__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a href="mailto:tiagonunes01ti@gmail.com" class="tile tile--link span-2 reveal">
+          <span class="tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </span>
+          <span class="link__text"><strong>E-mail</strong><small>tiagonunes01ti@gmail.com</small></span>
+          <span class="link__arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© 2026 Tiago Nunes dos Santos</p>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
